@@ -1,5 +1,5 @@
 from flask_frozen import Freezer
-from myapp import app
+from server import app
 
 # https://medium.com/@francescaguiducci/how-to-build-a-simple-personal-website-with-python-flask-and-netlify-d800c97c283d
 freezer = Freezer(app)
