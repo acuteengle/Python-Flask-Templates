@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container content">
+
+    <h4>{{author}} created this line using jinja if conditions</h4>
+    {% if sunny %}
+    <p>Today is sunny</p>
+    {% else %}
+    <p>Today is rainy</p>
+    {% endif %}
+
+    <br />
+    <h4>{{author}} created this line using jinja loops</h4>
+    {% for f in fruits %}
+    <h5>Fruit: {{f.name}}</h5>
+    <p>Cost: {{f.cost}}</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

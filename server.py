@@ -11,9 +11,13 @@ app.config['SECRET_KEY'] = 'myTestKey'
 
 @app.route('/')
 def home():
+    return render_template('index.html')
+
+@app.route('/helloWorld')
+def helloWorld():
     return 'hello world'
 
-@app.route('/about')
+@app.route('/jinja')
 def about():
     # templates
     # jinja is passing in variables from here
@@ -32,11 +36,11 @@ def about():
             "cost": 30
         }
     ]
-    return render_template('about.html', author="Brandon", sunny=False, fruits=fruits)
+    return render_template('jinja.html', author="Brandon", sunny=False, fruits=fruits)
 
 @app.route('/blog/<int:blog_id>')
 def blogpost(blog_id):
-    return 'this is blog post number ' + str(blog_id)
+    return render_template('blog.html', blog_id=blog_id)
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():

@@ -1,9 +1,10 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block content %}
 
-<table border="1">
-    {% for key,value in result.items() %}
+<div class="container content">
+    <table class="table">
+        {% for key,value in result.items() %}
         <tr>
             <th>
                 {{key}}
@@ -12,7 +13,8 @@
                 {{value}}
             </td>
         </tr>
-    {% endfor %}
-</table>
+        {% endfor %}
+    </table>
+</div>
 
 {% endblock %}

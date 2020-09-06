@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- https://www.sitepoint.com/a-basic-html5-template/ -->
-        <meta charset="utf-8" />
-        <title>test</title>
-    </head>
-    <body>
-        <div>
-            <h2>Navbar <a href="about.html">About</a></h2>
+
+<head>
+    <!-- https://www.sitepoint.com/a-basic-html5-template/ -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Forms and Templates</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/jinja">Jinja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/1">Blog 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/2">Blog 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/3">Blog 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/helloWorld">Hello World</a>
+                </li>
         </div>
-        {% block content %} {% endblock %}
-    </body>
+    </nav>
+    {% block content %} {% endblock %}
+</body>
+
 </html>
